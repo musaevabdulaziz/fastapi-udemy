@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from TodoApp.company.dependencies import get_token_header
+from company.dependencies import get_token_header
 
 
 router = APIRouter(prefix="/companyapis",

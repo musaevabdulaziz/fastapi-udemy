@@ -5,13 +5,10 @@ from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
-from sys import path
 
 import models
 from database import SessionLocal, engine
 
-
-path.append("..")
 
 SECRET_KEY = "QagpPU@wtkKFN)jEau9VCXQT8F^Ers!5z2^+ryqw"
 ALGORITHM = 'HS256'

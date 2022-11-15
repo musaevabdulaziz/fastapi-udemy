@@ -1,14 +1,11 @@
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
-from sys import path
 
 import models
 from database import engine, SessionLocal
-from .auth import get_current_user, get_user_exception, verify_password, get_password_hash
+from routers.auth import get_current_user, get_user_exception, verify_password, get_password_hash
 
-
-path.append("..")
 
 router = APIRouter(
     prefix="/users",
